@@ -1,0 +1,10 @@
+streamlit
+pandas
+plotly
+matplotlib
+pytz
+os-sys
+glob2
+jugaad-data
+bsedata
+pymongo
