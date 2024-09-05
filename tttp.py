@@ -438,7 +438,7 @@ elif option == "Shareholding Pattern":
 
 
     #@st.experimental_memo(ttl=60)
-    st.cache_data
+    #st.cache_data
     def plot_promoters(df):
         try:
 
