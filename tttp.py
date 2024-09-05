@@ -369,6 +369,7 @@ elif option == "Increased share by month":
 
 
 ###############################################################################################################################################################
+@st.cache_data
 elif option == "Shareholding Pattern":
 
     #directory = f"/home/zxc/rag/e/"
@@ -567,15 +568,14 @@ elif option == "Shareholding Pattern":
     formatted_dates_list = [pd.to_datetime(date).date() for date in formatted_dates_list]
 
     d = st.selectbox('Select a date:', formatted_dates_list)
-
-
-    selected_date = pd.to_datetime(d).date()
-
-    st.write(f'Selected date: {selected_date}')
-
-    print("date", selected_date)
-    print(df)
-    print(df['Date'])
+    if d is not None:
+        selected_date = pd.to_datetime(d).date()
+    
+        st.write(f'Selected date: {selected_date}')
+    
+        print("date", selected_date)
+        print(df)
+        print(df['Date'])
 
     if st.button('Submit'):
         now = datetime.datetime.now()
