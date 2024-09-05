@@ -388,9 +388,12 @@ elif option == "Shareholding Pattern":
     st.write("This is a quarter data of promoters.")
     company_codes  = dy["BSE Code"].unique()
 
-    options =  ["None"]+ company_codes
+    #options =  ["None"]+ company_codes
     #options = ["Select a company code"] + company_codes
+    #selected_code = st.selectbox("Select the company code (bse_code)/(nse_code)", options=options)
+    options =  ['None'] + list(company_codes) 
     selected_code = st.selectbox("Select the company code (bse_code)/(nse_code)", options=options)
+
 
 
     
